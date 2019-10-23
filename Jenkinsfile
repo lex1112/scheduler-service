@@ -10,7 +10,7 @@ pipeline {
         }
         stage('build') {
             steps {
-             sh "docker build -t scheduler-service:B${BUILD_NUMBER} -f Dockerfile ."
+             sh "docker -v"
             }
         }
     }
