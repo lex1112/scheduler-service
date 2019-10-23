@@ -2,6 +2,5 @@ node('master') {
     stage 'Checkout'
         checkout scm
     stage 'Build & UnitTest'
-        sh "docker build -t scheduler-service:B${BUILD_NUMBER} -f Dockerfile ."
-        sh "docker build -t scheduler-service:test-B${BUILD_NUMBER} -f Dockerfile.Integration ."
+        sh "docker -v"
 }
